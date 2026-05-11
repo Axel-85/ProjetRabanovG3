@@ -18,13 +18,13 @@ using MySqlConnector;
 using System.Configuration;
 using System.Data;
 
-namespace Centreloisirs
+namespace ProjetRabanovG3
     {
         internal List<Client> ChargerClients()
         {
             List<Client> clients = new List<Client>();
 
-            string connectionString = "Server=###;Database=###;User ID=hotel_user;Password=###;";
+            string connectionString = "Server=192.168.37.155;Database=###;User ID=hotel_user;Password=###;";
 
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
@@ -58,7 +58,7 @@ namespace Centreloisirs
         {
             List<Sejour> sejours = new List<Sejour>();
 
-            string connectionString = "Server=###;Database=###;User ID=###;Password=###;";
+            string connectionString = "Server=192.168.37.155;Database=###;User ID=###;Password=###;";
 
             using (MySqlConnection connexion = new MySqlConnection(connectionString))
             {
