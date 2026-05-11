@@ -77,7 +77,7 @@ namespace ProjetRabanovG3
                         {
                             Sejour sejour = new Sejour(Convert.ToDateTime(row["date_debut"]), Convert.ToDateTime(row["date_fin"]));
 
-
+                            //test
                             sejours.Add(sejour);
                         }
                     }
