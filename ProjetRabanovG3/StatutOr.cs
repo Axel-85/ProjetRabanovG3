@@ -12,6 +12,7 @@ namespace ProjetRabanovG3
             return 0.10m;
         }
 
+
         public override bool AAccesLounge()
         {
             return true; 
