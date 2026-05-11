@@ -17,7 +17,7 @@ namespace ProjetRabanovG3
             return false;
         }
         public virtual string NomStatut()
-        {
+        { 
             return "Bronze";
         }
     }
