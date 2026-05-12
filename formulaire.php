@@ -120,6 +120,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
 
         <button type="submit">Finaliser l'adhésion</button>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $id          = uniqid('C');
+            $id_effectuer = uniqid('E');
+            $nom         = htmlspecialchars($_POST['nom']);
+            $prenom      = htmlspecialchars($_POST['prenom']);
+            $email       = htmlspecialchars($_POST['email']);
+            $tel         = htmlspecialchars($_POST['telephone']);
+            $numerocb    = htmlspecialchars($_POST['numerocb']);
+            $codesecret  = htmlspecialchars($_POST['code_securite']);
+            $dateex      = htmlspecialchars($_POST['date_expiration']);
+            $siret       = htmlspecialchars($_POST['siret']);
+
+    if (insertUser($bdd, $id, $id_effectuer, $siret, $nom, $prenom, $email, $tel, $numerocb, $codesecret, $dateex) == 1) {
+        echo "<p class='alert alert-success'>Client ajouté avec succès !</p>";
+    } else {
+        echo "<p class='alert alert-danger'>Erreur lors de l'ajout du client.</p>";
+    }
+}
+?>
     </form>
 
     <div class="footer-link">
