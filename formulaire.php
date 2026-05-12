@@ -1,34 +1,3 @@
-<?php
-$nom = "";
-$prenom = "";
-$email = "";
-$tel = "";
-$numerocb = "";
-$codesecret = "";
-$dateex = "";
-$siret = "";
-$message = "";
-$messageClass = "";
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nom       = htmlspecialchars($_POST['nom'] ?? '');
-    $prenom    = htmlspecialchars($_POST['prenom'] ?? '');
-    $email     = htmlspecialchars($_POST['email'] ?? '');
-    $tel       = htmlspecialchars($_POST['telephone'] ?? '');
-    $numerocb  = htmlspecialchars($_POST['numerocb'] ?? '');
-    $codesecret = htmlspecialchars($_POST['code_securite'] ?? '');
-    $dateex    = htmlspecialchars($_POST['date_expiration'] ?? '');
-    $siret     = htmlspecialchars($_POST['siret'] ?? '');
-
-    if ($nom && $prenom && $email && $tel) {
-        $message = "Inscription réussie !";
-        $messageClass = "success";
-    } else {
-        $message = "Veuillez remplir tous les champs obligatoires.";
-        $messageClass = "error";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
