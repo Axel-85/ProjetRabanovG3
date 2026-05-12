@@ -8,11 +8,25 @@
     $dateex = htmlspecialchars($_POST['dateex']);
     $siret = htmlspecialchars($_POST['siret']);
 ?>
-?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Inscriptions</title>
+<style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f1ea; color: #333; }
+        .container { max-width: 400px; margin: 80px auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h2 { color: #b59410; border-bottom: 2px solid #b59410; padding-bottom: 10px; text-align: center; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; }
+        input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #b59410; color: white; padding: 12px; border: none; border-radius: 4px; cursor: pointer; width: 100%; font-size: 16px; margin-top: 10px; }
+        button:hover { background-color: #947a0d; }
+        .alert { padding: 15px; margin-bottom: 20px; border-radius: 4px; text-align: center; }
+        .success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+        .error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+        .footer-link { text-align: center; margin-top: 20px; font-size: 0.9em; }
+        .footer-link a { color: #b59410; text-decoration: none; }
+    </style>
     </head>
     <body>
 
