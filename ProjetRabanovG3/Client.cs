@@ -8,7 +8,7 @@ namespace ProjetRabanovG3
 {
     public class Client
     {
-        private int idClient;
+        private int idClient; 
         private string nom;
         private string prenom;
         private List<Sejour> sejours;
