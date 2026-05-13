@@ -11,7 +11,28 @@ function seConnecter()
    }
    
 }
+function validerLuhn($numero)
+{
+    // On force en string et on enlève les espaces éventuels
+    $numero = str_replace(' ', '', (string)$numero);
+    $somme = 0;
+    $longueur = strlen($numero);
+    $parite = $longueur % 2;
 
+    for ($i = 0; $i < $longueur; $i++) {
+        $chiffre = $numero[$i];
+        // On double un chiffre sur deux en partant de la gauche
+        if ($i % 2 == $parite) {
+            $chiffre *= 2;
+            if ($chiffre > 9) {
+                $chiffre -= 9;
+            }
+        }
+        $somme += $chiffre;
+    }
+
+    return ($somme % 10 == 0);
+}
 function getClient($bdd)
 {
    $req = "select * from client"
